@@ -3,10 +3,16 @@
 
 <head>
 
-	<script type="text/javascript" src="../piano/node_modules/tone/build/Tone.js"></script>
-	<script type="text/javascript" src="../piano/node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="https://tonejs.github.io/build/Tone.min.js"></script>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+
 
 	<link rel="stylesheet" type="text/css" href="style.css">
+		<div id="Keyboard"></div>
 	<ul class="set" id="list1">
 
 		<li class="white C2"></li>
@@ -111,8 +117,17 @@
 
 		};
 
-		var osc = new Tone.OmniOscillator();
-		var env = new Tone.AmplitudeEnvelope();
+var gainNode = Tone.context.createGain();
+var osc = new Tone.OmniOscillator();
+var synth = new Tone.Synth({
+"attack": 0.1,
+"decay": 0.2,
+"sustain": 1.0,
+"release": 0.8
+
+});
+
+
 		var tones = ["C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",
 			"C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
 			"C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4",
@@ -122,28 +137,34 @@
 		$(document).ready(function() {
 			//Mouse
 			$('#list1 li')
-				.mousedown(function(e) {
+				.hover(function(e) {
+					var whiteKeyName = ".white." + notes[e.keyCode];
+
+					var blackKeyName = ".black." + notes[e.keyCode];
+
+					$(whiteKeyName).toggleClass("whiteActive");
+
 					e = e || window.event;
 					var ul = $(this).parent();
 					var index = ul.children().index(this);
 
 					$('.foo').myfunction(index);
 
-				})
-				.mouseup(function(e) {
+				}
+				,function(e) {
 
+					synth.triggerRelease();
 
-					osc.stop();
 				});
 
 			$.fn.myfunction = function(index) {
-				osc.frequency.value = tones[index];
-				osc.start();
-				osc.connect(env);
-				env.toMaster();
-				env.triggerAttack();
+
+
+
+				synth.toMaster();
+				synth.triggerAttack(tones[index]);
 			};
-			// Keyboard
+			Keyboard
 
 
 			var mult = false,
@@ -160,9 +181,7 @@
 					if (!mult) {
 						mult = true;
 						prev = e.which;
-						setTimeout(function() {
-							mult = false;
-						}, 2000)
+
 					} else if (prev != e.which) {
 						mult = false;
 					} else {
@@ -177,14 +196,10 @@
 
 						$(newBlack).toggleClass("blackActive");
 						const note = notes[e.keyCode];
-						osc.frequency.value = notes[e.keyCode];
-						osc.start();
-						osc.connect(env);
-						env.toMaster();
-						env.triggerAttack();
-						if (!note) {
-							return;
-						}
+
+						synth.toMaster();
+						synth.triggerAttack(notes[e.keyCode]);
+
 					}
 
 					$('.foo').keyCode();
@@ -199,7 +214,7 @@
 					var newBlack = blackKeyName.replace("#", "is");
 
 					$(newBlack).removeClass("blackActive");
-					osc.stop();
+						synth.triggerRelease();
 				});
 
 

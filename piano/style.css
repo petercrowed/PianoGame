@@ -1,13 +1,23 @@
 * {
   box-sizing: border-box;
+
 }
 
-body {
-  margin: 0;
-  background: #222;
+
+
+label {
+
+    position: relative;
+    left: 0px;
+    top: 15px;
+    margin: 0;
+
 }
+
+
 
 ul {
+
   height: 18.875em;
   width: 120em;
   margin: 5em auto;
@@ -15,17 +25,20 @@ ul {
   position: relative;
   border: 1px solid #160801;
   border-radius: 1em;
-  background: -webkit-gradient(linear, right bottom, left top, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0)));
+
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset, 0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 li {
   margin: 0;
-  padding: 0;
+
   list-style: none;
   position: relative;
   float: left;
 }
+
+
+
 
  .white {
   height: 16em;
@@ -47,7 +60,20 @@ li {
   background: -webkit-linear-gradient(top, #fff 0%, #e9e9e9 100%);
   background: linear-gradient(top, #fff 0%, #e9e9e9 100%);
 }
+ul li.white:hover {
+ border-top: 1px solid #777;
+ border-left: 1px solid #999;
+ border-bottom: 1px solid #999;
+ box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+ background: -webkit-linear-gradient(top, #fff 0%, #e9e9e9 100%);
+ background: linear-gradient(top, #fff 0%, #e9e9e9 100%);
+}
 
+ul li.black:hover {
+ box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+ background: -webkit-linear-gradient(left, #444 0%, #222 100%);
+ background: linear-gradient(left, #444 0%, #222 100%);
+}
 .black {
   height: 8em;
   width: 2em;
@@ -119,21 +145,6 @@ ul li:last-child {
 }
 
 .blackActive {
-  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-  background: -webkit-linear-gradient(left, #444 0%, #222 100%);
-  background: linear-gradient(left, #444 0%, #222 100%);
-}
-
- .white:hover {
-  border-top: 1px solid #777;
-  border-left: 1px solid #999;
-  border-bottom: 1px solid #999;
-  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
-  background: -webkit-linear-gradient(top, #fff 0%, #e9e9e9 100%);
-  background: linear-gradient(top, #fff 0%, #e9e9e9 100%);
-}
-
-.black:hover {
   box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
   background: -webkit-linear-gradient(left, #444 0%, #222 100%);
   background: linear-gradient(left, #444 0%, #222 100%);

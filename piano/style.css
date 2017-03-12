@@ -15,7 +15,18 @@ label {
 }
 
 
+.rslider {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+p2 {
+    margin-left: 50px;
+}
+p4 {
+    margin-left: 70px;
+}
 ul {
 
   height: 18.875em;

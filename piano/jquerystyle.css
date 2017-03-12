@@ -841,11 +841,7 @@ label.ui-btn {
 	-moz-box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.15) /*{global-box-shadow-color}*/;
 	box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.15) /*{global-box-shadow-color}*/;
 }
-.ui-shadow-inset {
-	-webkit-box-shadow: inset 0 1px 3px /*{global-box-shadow-size}*/ 	rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
-	-moz-box-shadow: inset 0 1px 3px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
-	box-shadow: inset 0 1px 3px /*{global-box-shadow-size}*/ 	rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
-}
+
 .ui-overlay-shadow {
 	-webkit-box-shadow: 0 0 12px 		rgba(0,0,0,.6);
 	-moz-box-shadow: 0 0 12px 			rgba(0,0,0,.6);
@@ -950,17 +946,7 @@ html body .ui-group-theme-a .ui-bar-inherit {
 /* Page and overlay */
 
 /* Body: Read-only lists, text inputs, collapsible content */
-.ui-body-a,
-.ui-page-theme-a .ui-body-inherit,
-html .ui-bar-a .ui-body-inherit,
-html .ui-body-a .ui-body-inherit,
-html body .ui-group-theme-a .ui-body-inherit,
-html .ui-panel-page-container-a {
-	background-color: 			#fff /*{a-body-background-color}*/;
-	border-color:	 		#ddd /*{a-body-border}*/;
-	color: 					#333 /*{a-body-color}*/;
-	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ 	#f3f3f3 /*{a-body-shadow-color}*/;
-}
+
 .ui-body-a {
 	border-width: 1px;
 	border-style: solid;
@@ -1309,13 +1295,7 @@ button[disabled],
 	}
 }
 /* Viewport */
-.ui-mobile-viewport {
-	margin: 0;
-	overflow-x: visible;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+
 /* Issue #2066 */
 body.ui-mobile-viewport,
 div.ui-mobile-viewport {
@@ -1484,22 +1464,7 @@ div.ui-mobile-viewport {
 	padding: 1em;
 }
 /* Corner styling for dialogs and popups */
-.ui-corner-all > .ui-header:first-child,
-.ui-corner-all > .ui-content:first-child,
-.ui-corner-all > .ui-footer:first-child {
-	-webkit-border-top-left-radius: inherit;
-	border-top-left-radius: inherit;
-	-webkit-border-top-right-radius: inherit;
-	border-top-right-radius: inherit;
-}
-.ui-corner-all > .ui-header:last-child,
-.ui-corner-all > .ui-content:last-child,
-.ui-corner-all > .ui-footer:last-child {
-	-webkit-border-bottom-left-radius: inherit;
-	border-bottom-left-radius: inherit;
-	-webkit-border-bottom-right-radius: inherit;
-	border-bottom-right-radius: inherit;
-}
+
 /* Buttons and icons */
 .ui-btn {
 	font-size: 16px;
@@ -4075,12 +4040,7 @@ div.ui-rangeslider label {
 	margin-top: 0;
 	margin-bottom: 0;
 }
-.ui-input-text,
-.ui-input-search {
-	margin: .5em 0;
-	border-width: 1px;
-	border-style: solid;
-}
+
 .ui-mini {
 	margin: .446em;
 }

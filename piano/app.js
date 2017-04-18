@@ -252,13 +252,9 @@ synth.set({
     });
 
   $.fn.myfunction = function(index) {
-
-
-
     synth.toMaster();
     synth.triggerAttack(tones[index]);
   };
-
 
 
   var mult = false,

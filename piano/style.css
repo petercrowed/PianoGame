@@ -3,8 +3,20 @@
 
 }
 
+div.elements {
+    width: 50%;
+    padding: 10px;
+    border: 5px solid gray;
+      margin: 0 auto;
+}
 
-
+div.sliders
+ {
+   width: 90%;
+   padding: 10px;
+   border: 5px solid gray;
+     margin: 0 auto;
+ }
 label {
 
     position: relative;
@@ -17,11 +29,13 @@ label {
 
 .rslider {
   display: inline-block;
-  margin-top: 20px;
-  margin-left: 20px;
+  /*float:left;*/
+    margin-right:5px;
+
+
 }
 
-p2 {
+p {
     margin-left: 50px;
 }
 p4 {

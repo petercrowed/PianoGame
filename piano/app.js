@@ -94,7 +94,7 @@ $(document).ready(function() {
   //Night Mode
   $("p").click(function() {
     if ($('#night').is(':checked') == true) {
-      $("body").css("background", "#888");
+      $("body").css("background", "#f1f1f1");
 
     }
   });

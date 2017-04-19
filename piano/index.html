@@ -20,7 +20,7 @@
 	<div class "synth">
 		<div class="center">
 
-			<!-- <ul class="set" id="list1">
+			<ul class="set" id="list1">
 
 				<li class="white C2"></li>
 				<li class="black Cis2"></li>
@@ -81,44 +81,53 @@
 				<li class="white E5"></li>
 
 
-			</ul> -->
+			</ul>
 
 			<div class="elements">
 
-				<label for="select-based-flipswitch">Slider Piano 	 </label>
+<flips>
+				<div for="select-based-flipswitch" class="switch">Slider Piano 	 </div >
 
 				<input type="checkbox" data-role="flipswitch" name="switch" id="switch">
-				<label for="select-based-flipswitch">Night Mode	 </label>
+				<div  for="select-based-flipswitch" class="switch">Night Mode	 </div >
 
-				<p><input type="checkbox" data-role="flipswitch" name="night" id="night">
+				<night>
+					<input type="checkbox" data-role="flipswitch" name="night" id="night">
+				</night>
+</flips>
 
-					Volume Slider
-		Detune
-		Envelope Attack
-		Decay
-		Sustain
-		Release
+
+
+
+
 		<div class="centerButtons">
 					<div class="sliders">
 						<form>
-
+							<label for="VolumeSlider">Volume Slider<br/>
 							<div id="slider2" class="rslider"></div>
-
+						</label>
+									<label for="Detune">Detune<br/>
 							<div id="detune" class="rslider"></div>
-
+						</label>
+								<label for="EnvelopeAttack">Envelope Attack<br/>
 							<div id="envelopeAttack" class="rslider"></div>
+								</label>
 
-
+			<label for="Decay">Decay<br/>
 							<div id="decay" class="rslider"></div>
+						</label>
 
+							<label for="Sustain">Sustain<br/>
 							<div id="sustain" class="rslider"></div>
+	</label>
 
+		<label for="Release">		Release<br/>
 							<div id="release" class="rslider"></div>
-
+	</label>
 
 
 						</form>
-						<div>
+					</div>
 
 
 

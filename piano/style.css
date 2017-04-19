@@ -3,11 +3,19 @@
 
 }
 
+flips {
+  float : left;
+
+
+     height: 420px;
+     padding: 10px;
+}
 div.elements {
     /*width: 50%;*/
     width: 1800px;
+    height: 240px;
     padding: 10px;
-    border: 5px solid gray;
+    border: 5px solid #d2d2d2;
       margin: 0 auto;
 }
 
@@ -16,30 +24,30 @@ label {
     position: relative;
     left: 0px;
     top: 15px;
-    margin: 0;
+
+    float: left;
+    padding: 0 0.2em;
+
+
+
 
 }
 
-div.sliders
- {
-   /*width: 100%;*/
-   /*height: 90%;*/
-   padding: 10px;
-   border: 5px solid gray;
-     /*margin: 0 auto;*/
- }
+
+
+/*
+   height: 420px;
+   padding: 10px;*/
 
  .centerButtons {
-   /*width: 40%;*/
-   /*height: 90%;*/
- /*margin-left: 30%;
- margin-right: 30%*/
+
  width: 60%;
  margin: 0 auto;
+
  }
 
  .rslider {
-   display: inline-block;
+
    /*float:left;*/
      margin-right:5px;
 

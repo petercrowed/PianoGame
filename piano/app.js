@@ -92,18 +92,19 @@ $(document).ready(function() {
   }
 
   //Night Mode
-  $("p").click(function() {
+  $("night").click(function() {
     if ($('#night').is(':checked') == true) {
       $("body").css("background", "#f1f1f1");
-
+      $(".rs-bg-color").css("background-color"," #f1f1f1");
     }
   });
 
 
-  $("p").click(function() {
+  $("night").click(function() {
     if ($('#night').is(':checked') == false) {
 
       $("body").removeAttr('style');
+          $(".rs-bg-color").removeAttr('style');
     }
   });
 
